@@ -1,0 +1,8 @@
+{
+  "name": "learning-relay",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:MondoGao/learning-relay.git",
+  "author": "MondoGao <mondogao@gmail.com>",
+  "license": "MIT"
+}
