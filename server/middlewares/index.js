@@ -1,12 +1,12 @@
 const KoaLogger = require('koa-logger');
 const KoaCompose = require('koa-compose');
 
+const router = require('./router');
+
 const middlewares = [];
 
-middlewares.push(async function writeBody(ctx, next) {
-  ctx.body = 'hello koa1';
-  await next();
-});
+middlewares.push(router.routes());
+middlewares.push(router.allowedMethods());
 
 if (process.env.NODE_ENV === 'development') {
   middlewares.unshift(KoaLogger());
